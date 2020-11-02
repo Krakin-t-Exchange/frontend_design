@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c585161f-17d1-45e5-9a31-64a0d495ef57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/minerModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/readmeModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -54,7 +52,7 @@
       <workItem from="1604007079261" duration="7716000" />
       <workItem from="1604063159120" duration="11754000" />
       <workItem from="1604196484969" duration="5220000" />
-      <workItem from="1604232977318" duration="8332000" />
+      <workItem from="1604232977318" duration="9681000" />
     </task>
     <servers />
   </component>
