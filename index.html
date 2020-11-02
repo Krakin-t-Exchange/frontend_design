@@ -23,12 +23,45 @@
     <!--[if lt IE 9]>
     <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <![endif]-->
 </head>
 
 <body class="fix-header fix-sidebar">
 <div id="mask"></div>
 <!-- The Modal -->
+<div id="readmeModal" class="modal"
+     style="width: 650px;
+     height: 506px;
+     position:absolute;
+     margin: 30px auto;
+     border: 2px solid white;
+     background-color: #fff;
+     ;">
+    <!-- Modal content -->
+    <div class="modal-content" style="
+    background-color: #fff;
+ ">
+        <div style="text-align: center; font-size: 18px; display: inline-flex; float: left;border-bottom: 1px solid #000;">
+            <div class="closerdm" style="padding-left: 5px; padding-right: 35%;">
+                <i class="fa fa-window-close" aria-hidden="true"></i></div>
+            <div>Readme</div>
+        </div>
+        <div style="padding-left: 10px;">
+             <div style="height: 50px;"> </div>
+            <li style="padding: 0 10px 10px 10px;">• Metamask is a secure browser plugin for managing the Ethereum block-chain functions.</li>
+            <li style="padding: 0 10px 10px 10px;">• Krakin't exchange will not work without Metamask.</li>
+            <li style="padding: 0 10px 10px 10px;">• There might be Metamask alternatives you may consider trying.</li>
+            <li style="padding: 0 10px 10px 10px;">• Currently, Metamask is the safest option.</li>
+            <li style="padding: 0 10px 10px 10px;">• Authenticator is a browser plugin (optional) to ease the 2FA login access control.</li>
+            <li style="padding: 0 10px 10px 10px;">• We recommend that you install 2FA immediately and as soon as prompted.</li>
+            <li style="padding: 0 10px 10px 10px;">• Krakin't miner is a mining tool that helps you make more KRK tokens.</li>
+            <li style="padding: 0 10px 10px 10px;">• You may place your KRK tokens into the miner and watch your earnings grow.</li>
+            <li style="padding: 0 10px 10px 10px;">• Please visit our main page and links to learn more about mining/staking.</li>
+            <li style="padding: 0 10px 10px 10px;">• We are not responsible for any losses, provided a bullet-proof security.</li>
+            <li style="padding: 0 10px 10px 10px;">• Nevertheless, we can always help you recover KRK tokens with our unique architecture.</li>
+        </div>
+    </div>
+</div>
 
 <div id="myModal" class="modal"
      style="width: 450px;
@@ -45,237 +78,189 @@
     background-position: center;
     position: relative;
     background-size: 350px;">
-        <span class="close" style="padding-left: 15px;">&times;</span>
+        <div style="text-align: center; font-size: 18px; display: inline-flex; float: left;border-bottom: 1px solid #000;">
+            <div class="close" style="padding-left: 5px; padding-right: 31%;">
+                <i class="fa fa-window-close" aria-hidden="true"></i></div>
+            <div>Krakin't Miner</div>
+        </div>
+
         <iframe id='ifr' frameborder="0" width="450" height="690"></iframe>
     </div>
 </div>
-    <!-- Preloader - style you can find in spinners.css -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-    </div>
-    <!-- Main wrapper  -->
-    <div id="main-wrapper">
-        <!-- header header  -->
-        <div class="header">
-            <nav class="navbar top-navbar navbar-expand-md navbar-light">
-                <!-- Logo -->
-                <div class="navbar-header">
-                    <a class="navbar-brand">
-                        <b><img src="images/logo-text.png" height="48px" alt="homepage" class="dark-logo" /></b>
-                    </a>
-                </div>
-                <!-- End Logo -->
-                <div class="navbar-collapse">
-                    <!-- toggle and nav items -->
-                    <ul class="navbar-nav mr-auto mt-md-0">
-                        <b><a href="https://www.krakint.com/" aria-label="Krakin't Official Webpage" data-balloon-pos="down">Krakin't Website</a></b>
-                    </ul>
-                    <ul class="navbar-nav mr-auto mt-md-0">
-                        <div style="padding-right: 5px" aria-label="Start the Miner" data-balloon-pos="down" id="myBtn">
-                            <img src="images/icons/miner.png"
+<!-- Preloader - style you can find in spinners.css -->
+<div class="preloader">
+    <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
+</div>
+<!-- Main wrapper  -->
+<div id="main-wrapper">
+    <!-- header header  -->
+    <div class="header">
+        <nav class="navbar top-navbar navbar-expand-md navbar-light">
+            <!-- Logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand">
+                    <b><img src="images/logo-text.png" height="48px" alt="homepage" class="dark-logo"/></b>
+                </a>
+            </div>
+            <!-- End Logo -->
+            <div class="navbar-collapse">
+                <!-- toggle and nav items -->
+                <ul class="navbar-nav mr-auto mt-md-0">
+                    <b><a href="https://www.krakint.com/" aria-label="Krakin't Official Webpage"
+                          data-balloon-pos="down">Krakin't Website</a></b>
+                </ul>
+                <ul class="navbar-nav mr-auto mt-md-0">
+                    <div style="padding-right: 5px" aria-label="Start the Miner" data-balloon-pos="down" id="myBtn">
+                        <img src="images/icons/miner.png"
                              onmouseover="this.src='images/icons/miner_.png'"
                              onmouseout="this.src='images/icons/miner.png'"
                              height="25px">
-                        </div>
-                        <div style="padding-left: 5px" aria-label="Readme" data-balloon-pos="down">
+                    </div>
+                    <div style="padding-left: 5px" id="readmeBtn" aria-label="Readme" data-balloon-pos="down">
                         <img src="images/icons/question.png"
                              onmouseover="this.src='images/icons/question_.png'"
                              onmouseout="this.src='images/icons/question.png'"
                              height="25px">
-                        </div>
-                    </ul>
+                    </div>
+                </ul>
 
 
-
-                    <!-- User profile and search -->
-                    <ul class="navbar-nav my-lg-0">
-                        <div class="social-links">
-                            <a href="https://twitter.com/krakin_t" target=”_blank” aria-label="Twitter" data-balloon-pos="down">
-                                <img src="images/icons/twitter.png"
-                                     onmouseover="this.src='images/icons/twitter_.png'"
-                                     onmouseout="this.src='images/icons/twitter.png'"
-                                     width="30px">
-                            </a>
-                            </a>
-                            <a href="https://t.me/joinchat/UUATvVbwmm4EUut2259yGg" target=”_blank” aria-label="Telegram" data-balloon-pos="down">
-                                <img src="images/icons/telegram.png"
-                                     onmouseover="this.src='images/icons/telegram_.png'"
-                                     onmouseout="this.src='images/icons/telegram.png'"
-                                     width="30px">
-                            </a>
-                            <a href="https://www.instagram.com/krakin_t/" target=”_blank” aria-label="Instagram" data-balloon-pos="down">
-                                <img src="images/icons/instagram.png"
-                                     onmouseover="this.src='images/icons/instagram_.png'"
-                                     onmouseout="this.src='images/icons/instagram.png'"
-                                     width="30px">
-                            </a>
-                            <a href="https://github.com/krakintgithub" target=”_blank” aria-label="Github" data-balloon-pos="down">
-                                <img src="images/icons/github.png"
-                                     onmouseover="this.src='images/icons/github_.png'"
-                                     onmouseout="this.src='images/icons/github.png'"
-                                     width="30px">
-                            </a>
-
-                        </div>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!-- End header header -->
-        <!-- Left Sidebar  -->
-        <div class="left-sidebar">
-            <!-- Sidebar scroll-->
-            <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-devider"></li>
-                        <li class="nav-label">Home</li>
-                        <li> <a  aria-expanded="false"><i class="fa fa-sign-in" style="color:#c9d20e"></i>
-                            <span class="hide-menu" style="color:#c9d20e">Login</span></a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- End Sidebar navigation -->
-            </div>
-            <!-- End Sidebar scroll-->
-        </div>
-        <!-- End Left Sidebar  -->
-        <!-- Page wrapper  -->
-        <div class="page-wrapper">
-            <!-- Bread crumb -->
-            <div class="row page-titles">
-                <div class="col-md-5 align-self-center">
-                    <h3 class="text-primary">Login</h3> </div>
-                <div class="col-md-7 align-self-center">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">Home</li>
-                        <li class="breadcrumb-item active">Login</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="container-fluid" style="height: 530px;">
-                <div class="col-12">
-                    <div class="horizontalCenter">
-                        <div class="welcome">Welcome to</div>
-                        <img src="images/logo.svg" width=300px" alt="logo"/>
-                        <div class="exchangeText" style="color: #c9d20e; font-weight: 600;">Krakin't Independent Exchange</div>
-                        <div class="exchangeText"><img src="JUNK/loginbutton.png" height="25" width="151"/></div>
-                        <div class="exchangeText" style="font-size: 20px">For the best experience, install browser addons:</div>
-                        <div class="exchangeText">
-                            <a href="https://metamask.io/" target="_blank" aria-label="Metamask" data-balloon-pos="left">
-                        <img src="images/icons/metamask.svg" width="50px" style="padding:10px ">
-                            </a>
-                        <a href="https://authenticator.cc/" target="_blank" aria-label="Authenticator" data-balloon-pos="right">
-                            <img src="images/icons/auth.svg" width="50px "style="padding:10px ">
+                <!-- User profile and search -->
+                <ul class="navbar-nav my-lg-0">
+                    <div class="social-links">
+                        <a href="https://twitter.com/krakin_t" target=”_blank” aria-label="Twitter"
+                           data-balloon-pos="down">
+                            <img src="images/icons/twitter.png"
+                                 onmouseover="this.src='images/icons/twitter_.png'"
+                                 onmouseout="this.src='images/icons/twitter.png'"
+                                 width="30px">
                         </a>
-                        </div>
+                        </a>
+                        <a href="https://t.me/joinchat/UUATvVbwmm4EUut2259yGg" target=”_blank” aria-label="Telegram"
+                           data-balloon-pos="down">
+                            <img src="images/icons/telegram.png"
+                                 onmouseover="this.src='images/icons/telegram_.png'"
+                                 onmouseout="this.src='images/icons/telegram.png'"
+                                 width="30px">
+                        </a>
+                        <a href="https://www.instagram.com/krakin_t/" target=”_blank” aria-label="Instagram"
+                           data-balloon-pos="down">
+                            <img src="images/icons/instagram.png"
+                                 onmouseover="this.src='images/icons/instagram_.png'"
+                                 onmouseout="this.src='images/icons/instagram.png'"
+                                 width="30px">
+                        </a>
+                        <a href="https://github.com/krakintgithub" target=”_blank” aria-label="Github"
+                           data-balloon-pos="down">
+                            <img src="images/icons/github.png"
+                                 onmouseover="this.src='images/icons/github_.png'"
+                                 onmouseout="this.src='images/icons/github.png'"
+                                 width="30px">
+                        </a>
 
                     </div>
-                </div>
+                </ul>
             </div>
-
-
-            <div class="container-fluid" style="width: auto;">
-                <!-- Start Page Content -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div>• Krakin't Independent Exchange is a <b style="color:#fff">FREE</b> and <b style="color:#fff">OPEN</b> exchange providing a safe place for everyone to trade.</div>
-                            <div>• To be fully secured, please setup the 2FA as soon as prompted! </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End PAge Content -->
-            </div>
-            <!-- End Container fluid  -->
-        </div>
-        <!-- End Page wrapper  -->
+        </nav>
     </div>
-    <!-- End Wrapper -->
-    <!-- All Jquery -->
-    <script src="js/lib/jquery/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/jquery.slimscroll.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
-    <!--stickey kit -->
-    <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <!--Custom JavaScript -->
+    <!-- End header header -->
+    <!-- Left Sidebar  -->
+    <div class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <li class="nav-devider"></li>
+                    <li class="nav-label">Home</li>
+                    <li><a aria-expanded="false"><i class="fa fa-sign-in" style="color:#c9d20e"></i>
+                        <span class="hide-menu" style="color:#c9d20e">Login</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </div>
+    <!-- End Left Sidebar  -->
+    <!-- Page wrapper  -->
+    <div class="page-wrapper">
+        <!-- Bread crumb -->
+        <div class="row page-titles">
+            <div class="col-md-5 align-self-center">
+                <h3 class="text-primary">Login</h3></div>
+            <div class="col-md-7 align-self-center">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item active">Login</li>
+                </ol>
+            </div>
+        </div>
+        <div class="container-fluid" style="height: 530px;">
+            <div class="col-12">
+                <div class="horizontalCenter">
+                    <div class="welcome">Welcome to</div>
+                    <img src="images/logo.svg" width=300px" alt="logo"/>
+                    <div class="exchangeText" style="color: #c9d20e; font-weight: 600;">Krakin't Independent Exchange
+                    </div>
+                    <div class="exchangeText"><img src="JUNK/loginbutton.png" height="25" width="151"/></div>
+                    <div class="exchangeText" style="font-size: 20px">For the best experience, install browser addons:
+                    </div>
+                    <div class="exchangeText">
+                        <a href="https://metamask.io/" target="_blank" aria-label="Metamask" data-balloon-pos="left">
+                            <img src="images/icons/metamask.svg" width="50px" style="padding:10px ">
+                        </a>
+                        <a href="https://authenticator.cc/" target="_blank" aria-label="Authenticator"
+                           data-balloon-pos="right">
+                            <img src="images/icons/auth.svg" width="50px " style="padding:10px ">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid" style="width: auto;">
+            <!-- Start Page Content -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div>• Krakin't Independent Exchange is a <b style="color:#fff">FREE</b> and <b
+                                style="color:#fff">OPEN</b> exchange providing a safe place for everyone to trade.
+                        </div>
+                        <div>• To be fully secured, please setup the 2FA as soon as prompted!</div>
+                    </div>
+                </div>
+            </div>
+            <!-- End PAge Content -->
+        </div>
+        <!-- End Container fluid  -->
+    </div>
+    <!-- End Page wrapper  -->
+</div>
+<!-- End Wrapper -->
+<!-- All Jquery -->
+<script src="js/lib/jquery/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="js/jquery.slimscroll.js"></script>
+<!--Menu sidebar -->
+<script src="js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<!--Custom JavaScript -->
+<script src="js/minerModal.js"></script>
+<script src="js/readmeModal.js"></script>
+
+
+<script src="js/custom.min.js"></script>
 
 
 
-    <script src="js/custom.min.js"></script>
-
-
-<script>
-
-    var opened = false;
-
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    var bgrnd = document.getElementById("mask");
-
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-        if (!opened) {
-            document.getElementById('ifr').src += 'https://krakint-miner.onrender.com';
-            modal.style.display = "block";
-            bgrnd.style.display = "block";
-            disableScrolling();
-            opened = true;
-        } else {
-            modal.style.display = "block";
-            bgrnd.style.display = "block";
-            disableScrolling();
-        }
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-        bgrnd.style.display = "none";
-        enableScrolling();
-    }
-
-    bgrnd.onclick = function () {
-        modal.style.display = "none";
-        bgrnd.style.display = "none";
-        enableScrolling();
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            bgrnd.style.display = "none";
-            enableScrolling();
-        }
-    }
-
-    function disableScrolling() {
-        window.scrollTo(0, 0);
-        window.onscroll = function () {
-            window.scrollTo(0, 0);
-        };
-    }
-
-    function enableScrolling() {
-        window.onscroll = function () {
-        };
-    }
-
-</script>
 
 </body>
 
