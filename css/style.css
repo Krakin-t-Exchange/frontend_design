@@ -2088,8 +2088,8 @@ textarea {
   color: #263238;
 }
 .footer {
+  text-align: center;
   background: #ffffff none repeat scroll 0 0;
-  border-top: 1px solid rgba(120, 130, 140, 0.13);
   color: #67757c;
   left: 0;
   padding: 17px 15px;
